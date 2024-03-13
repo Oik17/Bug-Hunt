@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-void bubbleSort(int arr[], int n) {
+void bubbleSort(int arr[], int n) {  
   int i, j, temp;
   for (i = 0; i < n - 1; i++) {
-    for (j = 0; j < n - i - 1; j++) {
+    for (j = 0; j < n; j++) {  
       if (arr[j] > arr[j + 1]) {
         temp = arr[j];
         arr[j] = arr[j + 1];
@@ -28,7 +28,7 @@ int main() {
 
   bubbleSort(arr, n);
 
-  printf("\nAfter sorting array elements are - \n");
+  printf("\nAfter sorting (potentially incorrect) array elements are - \n");
   printArr(arr, n);
 
   return 0;

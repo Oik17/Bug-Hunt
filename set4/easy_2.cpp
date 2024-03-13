@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-void bubbleSort(int arr[], int n) {  // Error: incorrect inner loop condition
+void bubbleSort(int arr[], int n) {  
   int i, j, temp;
   for (i = 0; i < n - 1; i++) {
-    for (j = 0; j < n; j++) {  // This will lead to unnecessary passes
+    for (j = 0; j < n; j++) {  
       if (arr[j] > arr[j + 1]) {
         temp = arr[j];
         arr[j] = arr[j + 1];

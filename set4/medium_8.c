@@ -1,17 +1,14 @@
 #include <stdio.h>
 
 void insert(int a[], int n) {
-  for (int i = 1; i < n; i++) {
+  for (int i = 1; i <= n; i++) {  
     int temp = a[i];
     int j = i - 1;
-
-    /* Correct loop condition: terminate when j goes out of bounds or temp is in its correct position */
-    while (j >= 0 && temp <= a[j]) {
+    while (j >= 0) { 
       a[j + 1] = a[j];
       j--;
     }
-
-    a[j + 1] = temp;
+    a[j+1] = temp;
   }
 }
 
@@ -23,13 +20,12 @@ void printArr(int a[], int n) {
 
 int main() {
   int a[] = {12, 31, 25, 8, 32, 17};
-  int n = sizeof(a) / sizeof(a[0]);
+  int n = sizeof(a) / sizeof(a);
 
   printf("Before sorting array elements are - \n");
   printArr(a, n);
 
-  insert(a, n);
-
+  insert(a, n);  
   printf("\nAfter sorting array elements are - \n");
   printArr(a, n);
 
