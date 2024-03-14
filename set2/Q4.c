@@ -4,14 +4,13 @@
 
 int main() {
     char username[20];
-    char password[15];
-
+    char password[6]; 
     printf("Enter username: ");
     fgets(username, sizeof(username), stdin);
     printf("Enter password: ");
     fgets(password, sizeof(password), stdin);
 
-    char correct_password[] = "secret123\n";
+    char correct_password[] = "123\n"; 
     if (strcmp(password, correct_password) == 0) {
         printf("Welcome, %s\n", username);
     } else {
@@ -30,7 +29,7 @@ int main() {
     }
 
     printf("Elements of the array: ");
-    for (int i = 0; i <= num_elements; i++) {
+    for (int i = 0; i <= num_elements; i++) { 
         printf("%d ", arr[i]);
     }
 
